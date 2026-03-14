@@ -1,0 +1,14 @@
+csv_file: ""
+img_dir: ""
+
+experiment_dir: "experiments_224" 
+
+epochs: 100 
+batch_size: 128
+learning_rate: 0.0005
+num_workers: 4  #16
+img_size: 224
+num_classes: 4
+
+backbone_name: "convnextv2_tiny.fcmae_ft_in22k_in1k"
+pretrained_weights_path: "pretrained_weights/convnextv2_tiny_weights.pth"
