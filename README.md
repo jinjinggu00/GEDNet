@@ -30,6 +30,4 @@ python train.py --config configs/wcg_config.yaml
 ## MoER: Expert Library
 One of the core advantages of GEDNet is its modularity. We do not reinvent the wheel for image restoration; instead, we integrate top-tier, independently developed restoration models into our Mixture-of-Experts Restoration (MoER) library.
 During our pipeline execution, these experts are kept strictly frozen. You can find the original implementations and pre-trained weights of the selected experts below:\
-[Deraining Expert](https://github.com/Ephemeral182/UDR-S2Former_deraining)\
-[Dehazing Expert]:\
-Desnowing Expert:
+[Deraining Expert](https://github.com/Ephemeral182/UDR-S2Former_deraining), [Dehazing Expert](https://github.com/fiwy0527/AAAI25_SGDN) and [Desnowing Expert](https://github.com/alexlai2860/SnowMaster).
