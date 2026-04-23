@@ -24,8 +24,8 @@ Please download the datasets from their official sources and organize them in th
 ## 🚀Training the WCG
 We employ a differential learning rate strategy to fine-tune the pre-trained ConvNeXt backbone while training the randomly initialized FDConv module effectively. To start training the WCG module, run:
 ```
-python train.py --config configs/config224.yaml
-python train.py --config configs/config256.yaml
+python train.py --config configs/config224.yml
+python train.py --config configs/config256.yml
 ```
 
 ## 🧩MoER: Expert Library
