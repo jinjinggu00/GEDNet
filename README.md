@@ -15,21 +15,22 @@ conda activate gednet
 pip install -r requirements.txt
 ```
 
-## Datasets
+## 📂Datasets
 The experiments are conducted on both classification datasets (for training the WCG module) and detection datasets (for downstream evaluation).\
 **WCG Classification Dataset:** A large-scale adverse multi-weather dataset comprising 65,755 images (Clear, Rain, Snow, Fog).\
 **Downstream Detection Datasets:** ACDC, DAWN, RTTS, Cityscapes-Rain/Fog, and VOC-Snow.\
 Please download the datasets from their official sources and organize them in the``` data/``` directory. Update the``` csv_file``` and ```img_dir paths``` in the configuration file accordingly.
 
-## Training the WCG
+## 🚀Training the WCG
 We employ a differential learning rate strategy to fine-tune the pre-trained ConvNeXt backbone while training the randomly initialized FDConv module effectively. To start training the WCG module, run:
 ```
 python train.py --config configs/wcg_config.yaml
 ```
 
-## MoER: Expert Library
+## 🧩MoER: Expert Library
 One of the core advantages of GEDNet is its modularity. We do not reinvent the wheel for image restoration; instead, we integrate top-tier, independently developed restoration models into our Mixture-of-Experts Restoration (MoER) library.
 During our pipeline execution, these experts are kept strictly frozen. You can find the original implementations and pre-trained weights of the selected experts below:\
-[Deraining Expert](https://github.com/Ephemeral182/UDR-S2Former_deraining), [Dehazing Expert](https://github.com/fiwy0527/AAAI25_SGDN) and [Desnowing Expert](https://github.com/alexlai2860/SnowMaster).
+🌧️[Deraining Expert](https://github.com/Ephemeral182/UDR-S2Former_deraining), 🌫️[Dehazing Expert](https://github.com/fiwy0527/AAAI25_SGDN) and ❄️[Desnowing Expert](https://github.com/alexlai2860/SnowMaster).
 
-## 🎯 Downstream Detection
+## 🎯Downstream Detection
+We utilize the [YOLOv13s](https://github.com/iMoonLab/yolov13) as our decoupled downstream object detector. After the MoER module finishes targeted restoration, the images are forwarded to the detector.
