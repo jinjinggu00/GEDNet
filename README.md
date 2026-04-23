@@ -10,3 +10,6 @@
 ## Requirements
 - Python 3.10+
 ```pip install -r requirements.txt```
+
+### Dataset
+We recommend putting all datasets under the same folder (say $datasets) to ease management and following the instructions below to organize datasets to avoid modifying the source code. The file structure should look like:
