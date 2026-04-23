@@ -10,9 +10,12 @@
 ## Requirements
 The code is built with Python 3.10+ and PyTorch. To install the required dependencies, run:
 ```bash
--conda create -n gednet python=3.10
--conda activate gednet
--pip install -r requirements.txt
+conda create -n gednet python=3.10
+conda activate gednet
+pip install -r requirements.txt
 
 ## Datasets
-We recommend putting all datasets under the same folder (say $datasets) to ease management and following the instructions below to organize datasets to avoid modifying the source code. The file structure should look like:
+The experiments are conducted on both classification datasets (for training the WCG module) and detection datasets (for downstream evaluation).
+**WCG Classification Dataset:** A large-scale adverse multi-weather dataset comprising 65,755 images (Clear, Rain, Snow, Fog).
+**Downstream Detection Datasets: **ACDC, DAWN, RTTS, Cityscapes-Rain/Fog, and VOC-Snow.
+Please download the datasets from their official sources and organize them in the data/ directory. Update the csv_file and img_dir paths in the configuration file accordingly.
